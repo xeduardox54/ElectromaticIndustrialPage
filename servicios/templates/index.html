@@ -45,11 +45,12 @@ https://templatemo.com/tm-518-sentra
                 <nav>
                     <ul class="nav navbar-nav">
                         <li><a href="#top">Home</a></li>
-                        <li><a href="#featured">Featured</a></li>
-                        <li><a href="#projects">Recent Projects</a></li>
-                        <li><a href="#video">Presentation</a></li>
-                        <li><a href="#blog">Blog Entries</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#featured">Mantenimiento</a></li>
+                        <li><a href="#projects">Servicio Técnico</a></li>
+                        <li><a href="#video">Instalación</a></li>
+                        <li><a href="#blog">Venta de repuestos</a></li>
+                        <li><a href="#contact">Encuentranos</a></li>
+                        <li><a href="#contact">Contactanos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -57,7 +58,7 @@ https://templatemo.com/tm-518-sentra
 
         <div class="sidebar-navigation hidde-sm hidden-xs">
             <div class="logo">
-                <a href="#">Sen<em>tra</em></a>
+                <a href="#"><img src="{% static 'img/logotipo.png' %}" width='90%'></a>
             </div>
             <nav>
                 <ul>
@@ -65,42 +66,49 @@ https://templatemo.com/tm-518-sentra
                         <a href="#top">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Home
+                            Inicio
                         </a>
                     </li>
                     <li>
                         <a href="#featured">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Featured
+                            Mantenimiento
                         </a>
                     </li>
                     <li>
                         <a href="#projects">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Recent Work
+                            Servicio Técnico
                         </a>
                     </li>
                     <li>
                         <a href="#video">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Presentation
+                            Instalación
                         </a>
                     </li>
                     <li>
                         <a href="#blog">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Blog Entires
+                            Venta de repuestos
                         </a>
                     </li>
                     <li>
                         <a href="#contact">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Contact Us
+                            Encuentranos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Contactanos
                         </a>
                     </li>
                 </ul>
@@ -113,66 +121,40 @@ https://templatemo.com/tm-518-sentra
                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
             </ul>
         </div>
-
-        <div class="slider">
-            <div class="Modern-Slider content-section" id="top">
-                <!-- Item -->
-                <div class="item item-1">
-                    <div class="img-fill">
-                    <div class="image"></div>
-                    <div class="info">
-                        <div>
-                          <h1>Beautiful Template<br>Sentra</h1>
-                          <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
-                          	Please share our site link to your friends.</p>
-                          <div class="white-button button">
-                              <a href="#featured">Discover More</a>
-                          </div>
+        <!--
+            <section id="video" class="content-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h1>This is a <em>company</em> presentation.</h1>
+                            <p>Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.</p>
                         </div>
+                        <div class="text-content">
+                            <p>In eget ipsum sed lorem vehicula luctus. Curabitur non dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque id auctor tellus, vel ultricies augue. Duis condimentum aliquet blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis ultricies ligula ac gravida.</p>
+                        </div>
+                        <div class="accent-button button">
+                            <a href="#blog">Continue Reading</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="box-video">
+                            <video width='100%' controls>
+                                <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
+                                Your browser does not support the video tag.
+                            </video> 
                         </div>
                     </div>
                 </div>
-                <!-- // Item -->
-                <!-- Item -->
-                <div class="item item-2">
-                    <div class="img-fill">
-                        <div class="image"></div>
-                        <div class="info">
-                        <div>
-                          <h1>Please tell <br>your friends</h1>
-                          <p>Support templatemo by sharing a link to your friends.
-							<br>Thank you for helping us.</p>
-                          
-                          <div class="white-button button">
-                              <a href="#featured">Share More</a>
-                          </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- // Item -->
-                <!-- Item -->
-                <div class="item item-3">
-                    <div class="img-fill">
-                        <div class="image"></div>
-                        <div class="info">
-                        <div>
-                          <h1>Suspendisse suscipit<br>nulla sed</h1>
-                          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices <br>posuere cubilia Curae; Sed at massa turpis.</p>
-                          
-                          <div class="white-button button">
-                              <a href="#featured">Learn More</a>
-                          </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- // Item -->
-            </div>
-        </div>
+            </section>-->
 
 
         <div class="page-content">
+            <div id="top">
+                <video width='100%' controls autoplay>
+                    <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <section id="featured" class="content-section">
                 <div class="section-heading">
                     <h1>Featured<br><em>Places</em></h1>
@@ -361,6 +343,11 @@ https://templatemo.com/tm-518-sentra
                             <div class="video-container">
                                 <iframe width="100%" height="520" src="https://www.youtube.com/embed/j-_7Ub-Zkow?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                             </div>
+                            <!--
+                            <video width='100%' controls>
+                                <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
+                                Your browser does not support the video tag.
+                            </video> -->
                         </div>
                     </div>
                 </div>
