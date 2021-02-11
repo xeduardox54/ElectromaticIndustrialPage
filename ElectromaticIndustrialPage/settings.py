@@ -25,7 +25,7 @@ SECRET_KEY = '7^fh#y#9obeaxf3l)smmbdp=0t0@d%q3av*$aqblx!f0v+l_jf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.85.168.219']
 
 
 # Application definition
@@ -74,13 +74,26 @@ WSGI_APPLICATION = 'ElectromaticIndustrialPage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#Para base de datos por defecto
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
+#Para base de datos con PostgresSQL
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'electromaticindustrial',
+        'USER': 'admin',
+        'PASSWORD': 'eisrl',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -119,5 +132,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL= "/media/"

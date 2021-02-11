@@ -115,7 +115,7 @@ https://templatemo.com/tm-518-sentra
             </ul>
         </div>
             <section id="top" class="content-section">
-              <video width="100%" controls autoplay>
+              <video width="100%" controls autoplay muted>
                   <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
                   Your browser does not support the video tag.
               </video>
@@ -373,9 +373,9 @@ https://templatemo.com/tm-518-sentra
             
             lastScrollTop = st;
         }
-        // Función sidebar
+        // Función barra lateral
         const btnToggle = document.querySelector('.toggle-btn');
-        //Función de botón que activa el sidbar
+        //Función de botón que activa la barra lateral
         btnToggle.addEventListener('click', function () {
           console.log('clik')
           document.getElementById('sidebar').classList.toggle('active');
@@ -384,7 +384,7 @@ https://templatemo.com/tm-518-sentra
           document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.toggle('active');
           console.log(document.getElementById('sidebar'))
         });
-        // Mostrar sidebar
+        // Mostrar barra lateral
         $(document).ready(function(){
           //Sección de la página a la que aplicar la automatización
           var div = $("#page-content");
@@ -393,8 +393,7 @@ https://templatemo.com/tm-518-sentra
           //Cada vez que se hace scroll se activa la siguiente función
           $(window).scroll(function () {
            var windowpos = $(window).scrollTop();
-           //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-           // I am taking 100px scroll, you can take whatever you need
+           //Si se hace scroll por más de 100 pixeles desde arriba, se activa la barra lateral
            if (windowpos >= (pos.top - 100)) {
             if (cont == 1) {
               document.getElementById('sidebar').classList.add('active');
@@ -404,7 +403,7 @@ https://templatemo.com/tm-518-sentra
             }
             cont = 0;
            }
-           //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
+           //Si al hacer scroll se tienen menos de 100 pixeles recorridos desde arriba, se desactiva la barra lateral
            else {
             if (cont == 0) {
               document.getElementById('sidebar').classList.remove('active');

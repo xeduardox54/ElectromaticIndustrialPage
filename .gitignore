@@ -2,3 +2,4 @@ servicios/__pycache__/
 ElectromaticIndustrialPage/__pycache__/
 media/
 servicios/migrations/
+static/
