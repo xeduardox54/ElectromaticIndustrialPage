@@ -195,7 +195,7 @@ header {
   text-align: center;
 }
 
-.sidebar-navigation .logo a {
+.sidebar-navigation .logo a img{
   text-decoration: none;
   color: #fff;
   font-size: 24px;
@@ -224,7 +224,7 @@ header {
   top: -25%;
 }
 
-#page-content .logo a {
+#page-content .logo a img{
   text-decoration: none;
   color: #fff;
   font-size: 24px;
@@ -367,7 +367,7 @@ header {
 #sidebar .toggle-btn {
   position: absolute;
   left: 105%;
-  top: 175px;
+  top: 28%;
   cursor: pointer;
 }
 
