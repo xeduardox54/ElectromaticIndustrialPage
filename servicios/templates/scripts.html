@@ -1,0 +1,118 @@
+{% extends "contactos.html" %}
+{% load static %}
+{% block scripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"><\/script>')</script>
+
+<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script>
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+    var cont = 1;
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        lastScrollTop = st;
+    }
+    // Función barra lateral
+    const btnToggle = document.querySelector('.toggle-btn');
+    //Función de botón que activa la barra lateral
+    btnToggle.addEventListener('click', function () {
+        console.log('clik')
+        document.getElementById('sidebar').classList.toggle('active');
+        document.getElementById("page-content").classList.toggle('active');
+        document.getElementById("page-content").getElementsByClassName("logo")[0].classList.toggle('active');
+        document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.toggle('active');
+        window.dispatchEvent(new Event('resize'));
+        
+        console.log(document.getElementById('sidebar'))
+    });
+    // Mostrar barra lateral
+    $(document).ready(function(){
+        //Sección de la página a la que aplicar la automatización
+        var div = $("#page-content");
+        //Medimos la posición actual respecto de arriba a abajo de la pantalla en pixeles
+        var pos = div.position();
+        //Cada vez que se hace scroll se activa la siguiente función
+        $(window).scroll(function () {
+        var windowpos = $(window).scrollTop();
+        //Si se hace scroll por más de 100 pixeles desde arriba, se activa la barra lateral
+        //Cuidamos que esto no se aplique cuando se esté utilizando un dispositivo móvil
+        if (windowpos >= (pos.top) && window.innerWidth > 767) {
+        if (cont == 1) {
+            document.getElementById('sidebar').classList.add('active');
+            document.getElementById("page-content").classList.add('active');
+            document.getElementById("page-content").getElementsByClassName("logo")[0].classList.add('active');
+            document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.add('active');
+            window.dispatchEvent(new Event('resize'));
+        }
+        cont = 0;
+        }
+        //Si al hacer scroll se tienen menos de 100 pixeles recorridos desde arriba, se desactiva la barra lateral
+        else {
+        if (cont == 0) {
+            document.getElementById('sidebar').classList.remove('active');
+            document.getElementById("page-content").classList.remove('active');
+            document.getElementById("page-content").getElementsByClassName("logo")[0].classList.remove('active');
+            document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.remove('active');
+            window.dispatchEvent(new Event('resize'));
+        }
+        cont = 1;
+        }
+        });
+    });
+    //Sub secciones de barra lateral
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+    });
+    }
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="{% static 'main.js' %}"></script>
+{% endblock %}

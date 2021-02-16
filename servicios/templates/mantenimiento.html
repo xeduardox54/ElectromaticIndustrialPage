@@ -1,0 +1,50 @@
+{% extends "servicios.html" %}
+{% load static %}
+{% block mantenimiento %}
+<section id="mantenimiento" class="content-section">                
+    <img src="{% static 'img/mantenimiento.jpeg' %}" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
+    <div class="contenido">
+        <div class="section-heading">
+            <h1>Mantenimiento correctivo y preventivo de<br><em>Grupos Electrógenos</em></h1>
+        </div>
+        <div>
+            <p style="text-align: justify;">Brindamos <strong>mantenimiento predictivo, preventivo y correctivo</strong>&nbsp;en equipos de generaci&oacute;n el&eacute;ctrica industrial en todo el centro y sur&nbsp;del Per&uacute;. Contamos con experiencia y personal altamente calificado, otorgando a nuestros clientes&nbsp;la mejor garant&iacute;a. Realizamos monitoreo&nbsp;a sus equipos en forma periodica, trimestral , semestral, anual mediante un contrato de mantenimiento.</p>
+
+            <h2><strong>&iquest;Qu&eacute; incluye el Servicio de Mantenimiento Preventivo?</strong></h2>
+            <ul style="text-align: justify;">
+                <p><li>Cambio de filtros de aceite, combustible y aire</li></p>
+                <li>Nivelaci&oacute;n o cambio, seg&uacute;n corresponda del l&iacute;quido refrigerante.</li>
+                <li>Prueba de sensores, alarmas y fallos de panel.</li>
+                <li>Revisi&oacute;n y regulaci&oacute;n de tensi&oacute;n de alternador</li>
+                <li>Revisi&oacute;n y regulaci&oacute;n de velocidad del motor</li>
+                <li>Pruebas de funcionamiento generales en vac&iacute;o y con carga</li>
+                <li>Limpieza de la zona de trabajo</li>
+                <li>Revisi&oacute;n del sistema de arranque</li>
+                <li>Trabajos generales sobre el motor</li>
+                <li>Revisi&oacute;n del sistema de combustible</li>
+                <li>Revisi&oacute;n del sistema de refrigeraci&oacute;n</li>
+                <li>Revisi&oacute;n del sistema de admisi&oacute;n y escape</li>
+                <li>Revisi&oacute;n del sistema el&eacute;ctrico</li>
+            </ul>
+        </div>
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center">Imágenes del proceso de trabajo</h2>
+                </div>
+            </div>
+            <br>
+            <div class="owl-carousel">
+                {% for imagen in mantenimiento_imagenes %}
+                <div class="item">
+                    <div class="image">
+                        <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% block instalacion %}{% endblock %}
+{% endblock %}

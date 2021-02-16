@@ -1,0 +1,72 @@
+{% extends "top.html" %}
+{% load static %}
+{% block servicios %}
+<section id="servicios" class="content-section">
+    <div class="section-heading">
+        <h1>Servicios</h1>
+        <p>Entre los servicios que ofrecemos encontrarás:</p>
+    </div>
+    <div class="section-content">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="image">
+                    <img src="img/featured_1.jpg" alt="">
+                    <div class="featured-button button">
+                        <a href="#projects">Continue Reading</a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h4>Servicio 1</h4>
+                    <span>Texto</span>
+                    <p>Texto</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="img/featured_2.jpg" alt="">
+                    <div class="featured-button button">
+                        <a href="#projects">Continue Reading</a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h4>Servicio 2</h4>
+                    <span>Texto</span>
+                    <p>Texto</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="img/featured_3.jpg" alt="">
+                    <div class="featured-button button">
+                        <a href="#projects">Continue Reading</a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h4>Servicio 3</h4>
+                    <span>Texto</span>
+                    <p>Texto</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="img/featured_2.jpg" alt="">
+                    <div class="featured-button button">
+                        <a href="#projects">Continue Reading</a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h4>Servicio 4</h4>
+                    <span>Texto</span>
+                    <p>Texto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="page-content">
+    <div class="logo hidde-sm hidden-xs">
+        <a href=""><img src="{% static 'img/logo.png' %}"></a>
+    </div>
+    {% block mantenimiento %}{% endblock %}
+</div>
+{% endblock %}

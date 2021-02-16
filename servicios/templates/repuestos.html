@@ -1,0 +1,32 @@
+{% extends "instalacion.html" %}
+{% load static %}
+{% block repuestos %}
+<section id="suministros" class="content-section">    
+    <img src="{% static 'img/venta.jpeg' %}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
+    <div class="contenido">
+        <div class="section-heading">
+            <br><br>
+            <h1>Venta de <em>Repuestos</em></h1>
+        </div>
+        <div>
+            <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center">Imágenes del proceso de trabajo</h2>
+            </div>
+        </div>
+        <br>
+        <div class="owl-carousel owl-theme">
+            {% for imagen in repuesto_imagenes %}
+            <div class="item">
+                <div class="image">
+                    <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% block contactos %}{% endblock %}
+{% endblock %}

@@ -42,11 +42,11 @@ https://templatemo.com/tm-518-sentra
                 <nav>
                     <ul class="nav navbar-nav">
                         <li><a href="#top">Home</a></li>
-                        <li><a href="#featured">Mantenimiento</a></li>
-                        <li><a href="#projects">Servicio Técnico</a></li>
-                        <li><a href="#video">Instalación</a></li>
-                        <li><a href="#blog">Venta de repuestos</a></li>
-                        <li><a href="#contact">Contáctanos</a></li>
+                        <li><a href="#mantenimiento">Mantenimiento</a></li>
+                        <li><a href="#instalacion">Instalación</a></li>
+                        <li><a href="#ventas">Ventas/Alquiler</a></li>
+                        <li><a href="#suministros">Suministros</a></li>
+                        <li><a href="#contacto">Contáctanos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -70,7 +70,7 @@ https://templatemo.com/tm-518-sentra
                         </a>
                     </li>
                     <li>
-                        <a href="#featured">
+                        <a href="#mantenimiento">
                                 <span class="rect"></span>
                                 <span class="circle"></span>
                                 Mantenimiento
@@ -95,21 +95,21 @@ https://templatemo.com/tm-518-sentra
                         </div>
                     </li>
                     <li>
-                        <a href="#video">
+                        <a href="#instalacion">
                             <span class="rect"></span>
                             <span class="circle"></span>
                             Instalación
                         </a>
                     </li>
                     <li>
-                        <a href="#blog">
+                        <a href="#suministros">
                             <span class="rect"></span>
                             <span class="circle"></span>
-                            Suministritos
+                            Venta de repuestos/Suministritos
                         </a>
                     </li>
                     <li>
-                        <a href="#contact">
+                        <a href="#contacto">
                             <span class="rect"></span>
                             <span class="circle"></span>
                             Contáctanos
@@ -131,7 +131,7 @@ https://templatemo.com/tm-518-sentra
                 Your browser does not support the video tag.
             </video>
         </section>
-        <section id="featured" class="content-section">
+        <section id="servicios" class="content-section">
             <div class="section-heading">
                 <h1>Servicios</h1>
                 <p>Entre los servicios que ofrecemos encontrarás:</p>
@@ -197,66 +197,90 @@ https://templatemo.com/tm-518-sentra
             <div class="logo hidde-sm hidden-xs">
                 <a href=""><img src="{% static 'img/logo.png' %}"></a>
             </div>
-            <section id="featured" class="content-section">
-                    <img src="{% static 'img/mantenimiento.jpeg' %}" width="100%" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
-                <div class="section-heading">
-                    <br><br><br>
-                    <h1>Mantenimiento correctivo y preventivo de<br><em>Grupos Electrógenos</em></h1>
-                </div>
-                <div>
-                    <p style="text-align: justify;">Brindamos <strong>mantenimiento predictivo, preventivo y correctivo</strong>&nbsp;en equipos de generaci&oacute;n el&eacute;ctrica industrial en todo el centro y sur&nbsp;del Per&uacute;. Contamos con experiencia y personal altamente calificado, otorgando a nuestros clientes&nbsp;la mejor garant&iacute;a.</p>
-                    <br><br>
-
-                    <p>Realizamos monitoreo&nbsp;a sus equipos en forma periodica, trimestral , semestral, anual mediante un contrato de mantenimiento.</p>
-
-                    <p><img alt="Mantenimiento Grupos Electrógenos" src="http://gruposelectrogenosei.com/img/fotos/mantenimiento-preventivo-y-correctivo1581010854.jpeg" style="width:100%" /></p>
-
-                    <h2><strong>&iquest;Qu&eacute; incluye el Servicio de Mantenimiento Preventivo?</strong></h2>
-                    <ul style="text-align: justify;">
-                        <p><li>Cambio de filtros de aceite, combustible y aire</li></p>
-                        <li>Nivelaci&oacute;n o cambio, seg&uacute;n corresponda del l&iacute;quido refrigerante.</li>
-                        <li>Prueba de sensores, alarmas y fallos de panel.</li>
-                        <li>Revisi&oacute;n y regulaci&oacute;n de tensi&oacute;n de alternador</li>
-                        <li>Revisi&oacute;n y regulaci&oacute;n de velocidad del motor</li>
-                        <li>Pruebas de funcionamiento generales en vac&iacute;o y con carga</li>
-                        <li>Limpieza de la zona de trabajo</li>
-                        <li>Revisi&oacute;n del sistema de arranque</li>
-                        <li>Trabajos generales sobre el motor</li>
-                        <li>Revisi&oacute;n del sistema de combustible</li>
-                        <li>Revisi&oacute;n del sistema de refrigeraci&oacute;n</li>
-                        <li>Revisi&oacute;n del sistema de admisi&oacute;n y escape</li>
-                        <li>Revisi&oacute;n del sistema el&eacute;ctrico</li>
-                    </ul>
-                </div>
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h2 class="text-center">Imágenes del proceso de trabajo</h2>
-                        </div>
+            <section id="mantenimiento" class="content-section">                
+                <img src="{% static 'img/mantenimiento.jpeg' %}" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
+                <div class="contenido">
+                    <div class="section-heading">
+                        <h1>Mantenimiento correctivo y preventivo de<br><em>Grupos Electrógenos</em></h1>
                     </div>
-                    <br>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="image">
-                                <img src="{% static 'img/featured_1.jpg' %}" alt="">
+                    <div>
+                        <p style="text-align: justify;">Brindamos <strong>mantenimiento predictivo, preventivo y correctivo</strong>&nbsp;en equipos de generaci&oacute;n el&eacute;ctrica industrial en todo el centro y sur&nbsp;del Per&uacute;. Contamos con experiencia y personal altamente calificado, otorgando a nuestros clientes&nbsp;la mejor garant&iacute;a. Realizamos monitoreo&nbsp;a sus equipos en forma periodica, trimestral , semestral, anual mediante un contrato de mantenimiento.</p>
+
+                        <h2><strong>&iquest;Qu&eacute; incluye el Servicio de Mantenimiento Preventivo?</strong></h2>
+                        <ul style="text-align: justify;">
+                            <p><li>Cambio de filtros de aceite, combustible y aire</li></p>
+                            <li>Nivelaci&oacute;n o cambio, seg&uacute;n corresponda del l&iacute;quido refrigerante.</li>
+                            <li>Prueba de sensores, alarmas y fallos de panel.</li>
+                            <li>Revisi&oacute;n y regulaci&oacute;n de tensi&oacute;n de alternador</li>
+                            <li>Revisi&oacute;n y regulaci&oacute;n de velocidad del motor</li>
+                            <li>Pruebas de funcionamiento generales en vac&iacute;o y con carga</li>
+                            <li>Limpieza de la zona de trabajo</li>
+                            <li>Revisi&oacute;n del sistema de arranque</li>
+                            <li>Trabajos generales sobre el motor</li>
+                            <li>Revisi&oacute;n del sistema de combustible</li>
+                            <li>Revisi&oacute;n del sistema de refrigeraci&oacute;n</li>
+                            <li>Revisi&oacute;n del sistema de admisi&oacute;n y escape</li>
+                            <li>Revisi&oacute;n del sistema el&eacute;ctrico</li>
+                        </ul>
+                    </div>
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h2 class="text-center">Imágenes del proceso de trabajo</h2>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="{% static 'img/featured_2.jpg' %}" alt="">
+                        <br>
+                        <div class="owl-carousel">
+                            {% for imagen in mantenimiento_imagenes %}
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
+                                </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="video" class="content-section">
+            <section id="instalacion" class="content-section">
                 <img src="{% static 'img/instalacion.jpeg' %}" width="100%" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
-                <div class="section-heading">
-                    <br><br>
-                    <h1>Instalación de <em>Generadores</em></h1>
-                    <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+                <div class="contenido">
+                    <div class="section-heading">
+                        <h1>Instalación de <em>Generadores</em></h1>
+                    </div>
+                    <div>                        
+                        <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+                        <br>
+                    </div>
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h2 class="text-center">Imágenes del proceso de trabajo</h2>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="owl-carousel owl-theme">
+                            {% for imagen in instalacion_imagenes %}
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
-                <div class="section-content">
+            </section>
+            <section id="suministros" class="content-section">    
+                <img src="{% static 'img/venta.jpeg' %}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
+                <div class="contenido">
+                    <div class="section-heading">
+                        <br><br>
+                        <h1>Venta de <em>Repuestos</em></h1>
+                    </div>
+                    <div>
+                        <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+                    </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <h2 class="text-center">Imágenes del proceso de trabajo</h2>
@@ -264,41 +288,29 @@ https://templatemo.com/tm-518-sentra
                     </div>
                     <br>
                     <div class="owl-carousel owl-theme">
+                        {% for imagen in repuesto_imagenes %}
                         <div class="item">
                             <div class="image">
-                                <img src="{% static 'img/featured_1.jpg' %}" alt="">
+                                <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="{% static 'img/featured_2.jpg' %}" alt="">
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </section>
-            <section id="blog" class="content-section">    
-                <img src="{% static 'img/venta.jpeg' %}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
-                <div class="section-heading">
-                    <br><br>
-                    <h1>Venta de <em>Repuestos</em></h1>
-                    <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
-                </div>
-            </section>
-            <section id="contact" class="content-section">
+            <section id="contacto" class="content-section">
                 <div id="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.4697028092596!2d-71.54112898554354!3d-16.400954542533746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a5684292ea9%3A0x8745faeb5ca5bd33!2sELECTROMATIC%20INDUSTRIAL%20S.R.L.!5e0!3m2!1ses-419!2spe!4v1606333062481!5m2!1ses-419!2spe" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div id="contact-content">      
                        <div class="section-heading">
                             <h1><em>Contáctanos</em></h1>
+                            <img src="{% static 'img/contacto.jpg' %}" width="100%" alt="Contacto Grupos Electrógenos" class="card-img-top ">
                         </div>
                         <div class="col-sm-6">            
                             <div class="card">
-                                <img src="{% static 'img/contacto.jpg' %}" width="100%" alt="Contacto Grupos Electrógenos" class="card-img-top ">
                                 <div class="card-body pt-5 pb-5">
-                                    <br><br>
-                                    <ul style="text-align: left; font-size: 10px;">
+                                    <ul style="text-align: left; font-size: 17px;">
                                         <li>Dirección: Calle Consuelo 307-A, Cercado - Arequipa</li>
                                         <li>Teléfono: (054) 399450</li>
                                         <li>servicio_clientes@electromaticindustrial.com</li>

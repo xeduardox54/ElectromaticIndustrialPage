@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block top %}
+<section id="top" class="content-section">
+    <video autoplay muted loop>
+        <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
+        Your browser does not support the video tag.
+    </video>
+</section>
+{% block servicios %}{% endblock %}
+{% endblock %}
