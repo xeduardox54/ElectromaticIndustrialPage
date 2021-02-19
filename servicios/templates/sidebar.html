@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<header class="nav-down responsive-nav hidden-lg hidden-md">
+    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <!--/.navbar-header-->
+    <div id="main-nav" class="collapse navbar-collapse">
+        <nav>
+            <ul class="nav navbar-nav">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#mantenimiento">Mantenimiento</a></li>
+                <li><a href="#instalacion">Instalación</a></li>
+                <li><a href="#ventas">Ventas/Alquiler</a></li>
+                <li><a href="#suministros">Suministros</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="sidebar-navigation hidde-sm hidden-xs" id="sidebar">
+    <div class="logo">
+        <a href=""><img src="{% static 'img/logo.png' %}"></a>
+    </div>
+    <div class="toggle-btn">
+        <span>&#9776</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#top">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="#mantenimiento">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Mantenimiento
+                </a>
+                <div class="dropdown-container">
+                    <ul>
+                        <li>
+                            <a href="#featured1">
+                                <span class="rect"></span>
+                                <span class="circle"></span>
+                                Preventivo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#featured2">
+                                <span class="rect"></span>
+                                <span class="circle"></span>
+                                Correctivo
+                            </a>
+                        </li>
+                    </ul>
+                </div><!--
+                <a href="#mantenimiento">
+                    <button class="dropdown-btn">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Mantenimiento
+                    </button>
+                </a>
+                <div class="dropdown-container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>-->
+            </li>
+            <li>
+                <a href="#instalacion">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Instalación
+                </a>
+            </li>
+            <li>
+                <a href="#repuestos">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Venta de repuestos/Suministritos
+                </a>
+            </li>
+            <li>
+                <a href="#contacto">
+                    <span class="rect"></span>
+                    <span class="circle"></span>
+                    Contáctanos
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+    </ul>
+</div>
+{% block top %}{% endblock %}
+{% endblock %}

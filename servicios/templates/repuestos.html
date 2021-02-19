@@ -1,7 +1,7 @@
 {% extends "instalacion.html" %}
 {% load static %}
 {% block repuestos %}
-<section id="suministros" class="content-section">    
+<section id="repuestos" class="content-section">    
     <img src="{% static 'img/venta.jpeg' %}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
@@ -13,15 +13,17 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center">Imágenes del proceso de trabajo</h2>
+                <h2 class="text-center">Articulos que puedes revisar</h2>
+                <br><br><br><br><br><br>
             </div>
         </div>
         <br>
         <div class="owl-carousel owl-theme">
-            {% for imagen in repuesto_imagenes %}
+            {% for repuesto in repuestos %}
             <div class="item">
                 <div class="image">
-                    <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
+                    <img src="/media/{{MEDIA_URL}}{{ repuesto.imagen }}" alt="">
+                    <a href="/repuesto/{{ repuesto.id }}"><div>{{repuesto.descripcion}}</div></a>
                 </div>
             </div>
             {% endfor %}

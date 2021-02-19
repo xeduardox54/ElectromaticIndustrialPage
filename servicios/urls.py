@@ -6,4 +6,5 @@ app_name = 'servicios'
 
 urlpatterns = [
 	path('', views.index, name='index'),
+	path('repuesto/<int:repuesto_id>/', views.obtener_repuesto, name='obtener_repuesto'),
 ]
