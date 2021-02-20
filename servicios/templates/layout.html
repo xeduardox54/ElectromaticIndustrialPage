@@ -50,7 +50,8 @@ https://templatemo.com/tm-518-sentra
         var lastScrollTop = 0;
         var delta = 5;
         var navbarHeight = $('header').outerHeight();
-        var cont = 1;
+        var contSidebar = 1;
+        var contDropDown = 1;
 
         $(window).scroll(function(event){
             didScroll = true;
@@ -101,51 +102,71 @@ https://templatemo.com/tm-518-sentra
         $(document).ready(function(){
             //Sección de la página a la que aplicar la automatización
             var div = $("#page-content");
+            var divEnd = $("#seccion-contacto");
             //Medimos la posición actual respecto de arriba a abajo de la pantalla en pixeles
             var pos = div.position();
+            var posEnd = divEnd.position();
             //Cada vez que se hace scroll se activa la siguiente función
             $(window).scroll(function () {
             var windowpos = $(window).scrollTop();
-            //Si se hace scroll por más de 100 pixeles desde arriba, se activa la barra lateral
+            //Si se hace scroll hasta llegar a la sección div esclarecido anteriormente, se activa la barra lateral
             //Cuidamos que esto no se aplique cuando se esté utilizando un dispositivo móvil
-            if (windowpos >= (pos.top) && window.innerWidth > 767) {
-            if (cont == 1) {
-                document.getElementById('sidebar').classList.add('active');
-                document.getElementById("page-content").classList.add('active');
-                document.getElementById("page-content").getElementsByClassName("logo")[0].classList.add('active');
-                document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.add('active');
-                window.dispatchEvent(new Event('resize'));
+            if (windowpos >= (pos.top) && windowpos <= (posEnd.top) && window.innerWidth > 767) {
+                if (contSidebar == 1) {
+                    document.getElementById('sidebar').classList.add('active');
+                    document.getElementById("page-content").classList.add('active');
+                    document.getElementById("page-content").getElementsByClassName("logo")[0].classList.add('active');
+                    document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.add('active');
+                    window.dispatchEvent(new Event('resize'));
+                }
+                contSidebar = 0;
             }
-            cont = 0;
-            }
-            //Si al hacer scroll se tienen menos de 100 pixeles recorridos desde arriba, se desactiva la barra lateral
+            //Si es lo contrario, se desactiva la barra lateral
             else {
-            if (cont == 0) {
-                document.getElementById('sidebar').classList.remove('active');
-                document.getElementById("page-content").classList.remove('active');
-                document.getElementById("page-content").getElementsByClassName("logo")[0].classList.remove('active');
-                document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.remove('active');
-                window.dispatchEvent(new Event('resize'));
-            }
-            cont = 1;
+                if (contSidebar == 0) {
+                    document.getElementById('sidebar').classList.remove('active');
+                    document.getElementById("page-content").classList.remove('active');
+                    document.getElementById("page-content").getElementsByClassName("logo")[0].classList.remove('active');
+                    document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.remove('active');
+                    window.dispatchEvent(new Event('resize'));
+                }
+                contSidebar = 1;
             }
             });
         });
         //Sub secciones de barra lateral
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-                } else {
-                dropdownContent.style.display = "block";
+        $(document).ready(function(){
+            //Sección de la página a la que aplicar la automatización
+            var divStart = $("#seccion-mantenimiento");
+            var divEnd = $("#seccion-instalacion");
+            //Medimos la posición actual respecto de arriba a abajo de la pantalla en pixeles
+            var posStart = divStart.position();
+            var posEnd = divEnd.position();
+            //Cada vez que se hace scroll se activa la siguiente función
+            $(window).scroll(function () {
+                var windowpos = $(window).scrollTop();
+                //Si se hace scroll hasta llegar a la sección div esclarecido anteriormente, se activa la sub sección
+                if (windowpos >= (posStart.top) && windowpos <= (posEnd.top) - 200) {
+                    if (contDropDown == 1) {
+                        var dropdown = document.getElementsByClassName("dropdown-btn")[0];
+                        dropdown.classList.toggle("active");
+                        var dropdownContent = dropdown.nextElementSibling;
+                        dropdownContent.style.display = "block";
+                    }
+                    contDropDown = 0;
+                }
+                //Si es lo contrario, se desactiva la sub sección
+                else {
+                    if (contDropDown == 0) {
+                        var dropdown = document.getElementsByClassName("dropdown-btn")[0];
+                        dropdown.classList.toggle("active");
+                        var dropdownContent = dropdown.nextElementSibling;
+                        dropdownContent.style.display = "none";
+                    }
+                    contDropDown = 1;
                 }
             });
-        }
+        });
 
         //Pantalla de carga
         $(window).load(function() {

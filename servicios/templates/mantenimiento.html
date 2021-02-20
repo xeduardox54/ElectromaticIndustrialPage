@@ -1,7 +1,7 @@
 {% extends "servicios.html" %}
 {% load static %}
 {% block mantenimiento %}
-<section id="mantenimiento" class="content-section">                
+<div id="seccion-mantenimiento"><section id="mantenimiento" class="content-section">                
     <img src="{% static 'img/mantenimiento.jpeg' %}" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
@@ -45,7 +45,17 @@
                 {% endfor %}
             </div>
         </div>
+        <section id="preventivo" class="content-section">
+            <br><br><br><br><br><br><br><br>
+            Preventivo
+            <br><br><br><br><br><br><br><br>
+        </section>
+        <section id="correctivo" class="content-section">
+            <br><br><br><br><br><br><br><br>
+            Correctivo
+            <br><br><br><br><br><br><br><br>
+        </section>
     </div>
-</section>
+</section></div>
 {% block instalacion %}{% endblock %}
 {% endblock %}

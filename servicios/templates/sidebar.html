@@ -12,11 +12,10 @@
     <div id="main-nav" class="collapse navbar-collapse">
         <nav>
             <ul class="nav navbar-nav">
-                <li><a href="#top">Home</a></li>
+                <li><a href="#top">Inicio</a></li>
                 <li><a href="#mantenimiento">Mantenimiento</a></li>
                 <li><a href="#instalacion">Instalación</a></li>
-                <li><a href="#ventas">Ventas/Alquiler</a></li>
-                <li><a href="#suministros">Suministros</a></li>
+                <li><a href="#ventas">Venta de repuestos/Suministritos</a></li>
                 <li><a href="#contacto">Contáctanos</a></li>
             </ul>
         </nav>
@@ -41,41 +40,31 @@
                 </a>
             </li>
             <li>
-                <a href="#mantenimiento">
-                    <span class="rect"></span>
-                    <span class="circle"></span>
-                    Mantenimiento
-                </a>
-                <div class="dropdown-container">
+                <div class="dropdown-btn">
+                    <a href="#mantenimiento">
+                        <span class="rect"></span>
+                        <span class="circle"></span>
+                        Mantenimiento
+                    </a>
+                </div>
+                <div class="dropdown-container" style="display: none;">
                     <ul>
                         <li>
-                            <a href="#featured1">
+                            <a href="#preventivo">
                                 <span class="rect"></span>
                                 <span class="circle"></span>
                                 Preventivo
                             </a>
                         </li>
                         <li>
-                            <a href="#featured2">
+                            <a href="#correctivo">
                                 <span class="rect"></span>
                                 <span class="circle"></span>
                                 Correctivo
                             </a>
                         </li>
                     </ul>
-                </div><!--
-                <a href="#mantenimiento">
-                    <button class="dropdown-btn">
-                        <span class="rect"></span>
-                        <span class="circle"></span>
-                        Mantenimiento
-                    </button>
-                </a>
-                <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>-->
+                </div>
             </li>
             <li>
                 <a href="#instalacion">
@@ -101,11 +90,10 @@
         </ul>
     </nav>
     <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        <li><a href="{{ redes.facebook }}"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="{{ redes.twitter }}"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="{{ redes.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="{{ redes.behance }}"><i class="fa fa-behance"></i></a></li>
     </ul>
 </div>
 {% block top %}{% endblock %}

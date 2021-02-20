@@ -424,10 +424,6 @@ header {
   border: 3px solid green;
 }
 
-/* Sidebar sub drop down*/
-
-
-
 /* Slider Style */
 
 .slider .content-section {
@@ -581,7 +577,6 @@ header {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  padding-top: 80px;
 }
 
 #servicios img {
@@ -732,7 +727,6 @@ header {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  padding-top: 80px;
 }
 
 #mantenimiento .section-heading {
@@ -863,41 +857,12 @@ header {
   margin-bottom: 12.5px;
 }
 
-
-
-/* Projects Style */
-
-#projects {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 50px;
-}
-
-#projects .masonry {
-  position: relative;
-  width: 100%;
-}
-
-#projects .masonry .item img {
-  transition: all 1s;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-#projects .masonry .item img:hover {
-  opacity: 0.5;
-}
-
-
-
 /* Instalacion Style */
 
 #instalacion .contenido{
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  padding-top: 80px;
 }
 
 #instalacion .section-heading {
@@ -1039,7 +1004,6 @@ header {
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  padding-top: 80px;
 }
 
 #repuestos .section-heading {
@@ -1203,7 +1167,7 @@ header {
 }
 
 #contact-content {
-  padding: 80px 60px;
+  padding: 0px 60px;
 }
 
 #contacto input {
