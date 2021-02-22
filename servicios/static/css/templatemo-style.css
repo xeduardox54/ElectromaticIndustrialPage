@@ -1164,10 +1164,24 @@ header {
 
 #contacto {
   padding-top: 0px;
+  background-color: #10b421;
 }
 
-#contact-content {
+#contacto #contact-content .pilar-contacto {
+  padding: 60px 10px;
+  width: 35%;
+  height: 100%;
+  float: left;
+  position: relative;
+  color: white;
+  text-align: left;
+}
+
+#contacto #contact-content .informacion-contacto {
   padding: 0px 60px;
+  width: 65%;
+  float: left;
+  background-color: white;
 }
 
 #contacto input {

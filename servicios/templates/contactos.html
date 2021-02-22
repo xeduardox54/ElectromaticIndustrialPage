@@ -5,32 +5,61 @@
     <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.4697028092596!2d-71.54112898554354!3d-16.400954542533746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a5684292ea9%3A0x8745faeb5ca5bd33!2sELECTROMATIC%20INDUSTRIAL%20S.R.L.!5e0!3m2!1ses-419!2spe!4v1606333062481!5m2!1ses-419!2spe" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-    <div id="contact-content">      
-           <div class="section-heading">
-                <h1><em>Contáctanos</em></h1>
-                <img src="{% static 'img/contacto.jpg' %}" width="100%" alt="Contacto Grupos Electrógenos" class="card-img-top ">
-            </div>
+    <div id="contact-content">    
+        <div class="pilar-contacto">
             <div class="col-sm-6">            
                 <div class="card">
-                    <div class="card-body pt-5 pb-5">
-                        <ul style="text-align: left; font-size: 10px;">
-                            <li>Dirección: Calle Consuelo 307-A, Cercado - Arequipa</li>
-                            <li>Teléfono: (054) 399450</li>
-                            <li>servicio_clientes@electromaticindustrial.com</li>
-                            <li><a href="http://electromaticindustrial.com" target="_blank">electromaticindustrial.com</a></li>
-                        </ul>
+                    <div class="card-body pt-5 pb-5" style="width: 100%;">
+                        <h1>Contacte con Nosotros</h1>
+                        -----------------
+                        <h4>Dirección: Calle Consuelo 307-A, Cercado - Arequipa</h4>
+                        <br>
+                        <h4>Teléfono: (054) 399450</h4>
+                        <h4>servicio_clientes@electromaticindustrial.com</h4>
+                        <h4><a href="http://electromaticindustrial.com" target="_blank">electromaticindustrial.com</a></h4>
                     </div>
                 </div>
             </div>
-        <div class="row justify-content-center">        
-            <div class="col-sm-12">
-                <h1 class="h2 border-bottom border-warning border-left p-2"><span class="text-warning">Nuestros Clientes</span></h1>            
-                <div class="card">                
-                    <div class="card-body">
-                        <p>Empresas que confían en nosotros</p>   
-                        <div class="row justify-content-center">
-                            <div class="col-sm-2 mb-2">
-                                <img src="/img/clientes/perurail.jpg" alt="" class="img-fluid border">
+        </div>
+        <div class="informacion-contacto">
+            <div class="section-heading">
+                <h1><em>Contáctanos</em></h1>
+            </div>
+            <div class="col-sm-6 pb-5 pt-5 bg-warning" style="width: 100%;">
+                <h2 class="h4 border-bottom border-dark">FORMULARIO DE CONTACTO</h2>
+                <p>Por favor llene los campos adecuadamente y nos contactaremos con Ud. a la brevedad posible</p>
+                            <form action="/contacto" method="post">
+                    <input type="hidden" name="_token" value="8EE6FHTGW7d1k8MeWarGLGqIwmFNXQA1G9WawgiM">                <div class="form-group">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombres y apellidos:" required>                    
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="id" class="form-control" placeholder="DNI/RUC:">                    
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email:" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" class="form-control" placeholder="Teléfono:" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" class="form-control" placeholder="Mensaje:" required></textarea>
+                    </div>
+                    <input type="submit" value="ENVIAR" name="btn" class="btn btn-danger mx-auto d-block">
+                    <p class="small">(*) Datos obligatorios</p>
+
+                </form>
+                            
+            </div>
+            <div class="row justify-content-center">        
+                <div class="col-sm-12">
+                    <h1 class="h2 border-bottom border-warning border-left p-2"><span class="text-warning">Nuestros Clientes</span></h1>            
+                    <div class="card">                
+                        <div class="card-body">
+                            <p>Empresas que confían en nosotros</p>   
+                            <div class="row justify-content-center">
+                                <div class="col-sm-2 mb-2">
+                                    <img src="/img/clientes/perurail.jpg" alt="" class="img-fluid border">
+                                </div>
                             </div>
                         </div>
                     </div>
