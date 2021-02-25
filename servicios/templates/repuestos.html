@@ -2,14 +2,14 @@
 {% load static %}
 {% block repuestos %}
 <section id="repuestos" class="content-section">    
-    <img src="{% static 'img/venta.jpeg' %}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
+    <img src="/media/{{MEDIA_URL}}{{ repuestos.portada_imagen }}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
             <br><br>
             <h1>Venta de <em>Repuestos</em></h1>
         </div>
         <div>
-            <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+            <p style="text-align: justify;">{{ repuestos.contenido }}</p>
         </div>
         <div class="row">
             <div class="col-sm-12">
@@ -19,7 +19,7 @@
         </div>
         <br>
         <div class="owl-carousel owl-theme">
-            {% for repuesto in repuestos %}
+            {% for repuesto in repuestos.articulos.all %}
             <div class="item">
                 <div class="image">
                     <img src="/media/{{MEDIA_URL}}{{ repuesto.imagen }}" alt="">
@@ -30,5 +30,5 @@
         </div>
     </div>
 </section>
-{% block contactos %}{% endblock %}
+{% block suministros %}{% endblock %}
 {% endblock %}

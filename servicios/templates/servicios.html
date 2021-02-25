@@ -11,41 +11,46 @@
         <div class="owl-carousel owl-theme">
             <div class="item">
                 <div class="image">
-                    <img src="{% static 'img/featured_1.jpg' %}" alt="">
+                    <img src="/media/{{ MEDIA_URL }}{{ mantenimiento.servicio_imagen }}" alt="">
                     <div class="featured-button button">
-                        <a href="#mantenimiento">Continuar leyendo</a>
+                        <a href="#mantenimiento">Revisar</a>
                     </div>
                 </div>
                 <div class="text-content">
                     <h4>Mantenimiento Preventivo y Correctivo</h4>
-                    <span>Texto</span>
-                    <p>Texto</p>
                 </div>
             </div>
             <div class="item">
                 <div class="image">
-                    <img src="{% static 'img/featured_2.jpg' %}" alt="">
+                    <img src="/media/{{ MEDIA_URL }}{{ instalacion.servicio_imagen }}" alt="">
                     <div class="featured-button button">
-                        <a href="#instalacion">Continuar leyendo</a>
+                        <a href="#instalacion">Revisar</a>
                     </div>
                 </div>
                 <div class="text-content">
                     <h4>Instalación de Generadores</h4>
-                    <span>Texto</span>
-                    <p>Texto</p>
                 </div>
             </div>
             <div class="item">
                 <div class="image">
-                    <img src="{% static 'img/featured_3.jpg' %}" alt="">
+                    <img src="/media/{{ MEDIA_URL }}{{ repuestos.servicio_imagen }}" alt="">
                     <div class="featured-button button">
-                        <a href="#repuestos">Continuar leyendo</a>
+                        <a href="#repuestos">Revisar</a>
                     </div>
                 </div>
                 <div class="text-content">
-                    <h4>Venta de Repuestos</h4>
-                    <span>Texto</span>
-                    <p>Texto</p>
+                    <h4>Venta y alquiler de Repuestos</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="/media/{{ MEDIA_URL }}{{ suministro.servicio_imagen }}" alt="">
+                    <div class="featured-button button">
+                        <a href="#repuestos">Revisar</a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <h4>Venta y alquiler de Suministros</h4>
                 </div>
             </div>
         </div>

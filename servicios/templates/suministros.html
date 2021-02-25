@@ -1,0 +1,34 @@
+{% extends "repuestos.html" %}
+{% load static %}
+{% block suministros %}
+<section id="suministros" class="content-section">   
+    <img src="/media/{{ MEDIA_URL }}{{ suministro.portada_imagen }}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
+    <div class="contenido">
+        <div class="section-heading">
+            <br><br>
+            <h1><em>Suministros</em></h1>
+        </div>
+        <div>
+            <p style="text-align: justify;">{{ suministro.contenido }}</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center">Articulos que puedes revisar</h2>
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+        <br>
+        <div class="owl-carousel owl-theme">  
+            {% for sumin in suministro.articulos.all %}
+            <div class="item">
+                <div class="image">
+                    <img src="/media/{{MEDIA_URL}}{{ sumin.imagen }}" alt="">
+                    <a href="/suministro/{{ sumin.id }}"><div>{{sumin.descripcion}}</div></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% block contactos %}{% endblock %}
+{% endblock %}

@@ -39,7 +39,7 @@ https://templatemo.com/tm-518-sentra
                     <a href="http://100.25.132.59"><img src="{% static 'img/logo.png' %}"></a>
                 </div>
                 <div class="section-heading">        
-                    <h1 style="color: white;">Venta de <em>Repuestos</em></h1>
+                    <h1 style="color: white;"><em>Suministros</em></h1>
                 </div>
             </section>
             <section id="blog" class="content-section">
@@ -51,12 +51,12 @@ https://templatemo.com/tm-518-sentra
                                     <ul>
                                         <li>
                                             <div class="item">
-                                                <img src="/media/{{MEDIA_URL}}{{repuesto.imagen}}" alt="">
+                                                <img src="/media/{{MEDIA_URL}}{{suministro.imagen}}" alt="">
                                                 <div class="text-content">
-                                                    <h4>{{repuesto.nombre}}</h4>
-                                                    <span>Venta: S/ {{repuesto.precio_venta}}</span><br>
-                                                    <span>Alquiler: S/ {{repuesto.precio_alquiler}}</span>
-                                                    <p>{{repuesto.descripcion}}</p>
+                                                    <h4>{{suministro.nombre}}</h4>
+                                                    <span>Venta: S/ {{suministro.precio_venta}}</span><br>
+                                                    <span>Alquiler: S/ {{suministro.precio_alquiler}}</span>
+                                                    <p>{{suministro.descripcion}}</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -76,11 +76,11 @@ https://templatemo.com/tm-518-sentra
                         </div>
                     </div>
                     <div class="owl-carousel owl-theme">
-                        {% for item in repuestos %}
+                        {% for item in suministros %}
                         <div class="item">
                             <div class="image">
                                 <img src="/media/{{MEDIA_URL}}{{ item.imagen }}" alt="">
-                                <a href="/repuesto/{{ item.id }}"><div>{{item.descripcion}}</div></a>
+                                <a href="/suministro/{{ item.id }}"><div>{{item.descripcion}}</div></a>
                             </div>
                         </div>
                         {% endfor %}

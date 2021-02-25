@@ -1,4 +1,4 @@
-{% extends "repuestos.html" %}
+{% extends "suministros.html" %}
 {% load static %}
 {% block contactos %}
 <div id="seccion-contacto"><section id="contacto" class="content-section">
@@ -12,11 +12,11 @@
                     <div class="card-body pt-5 pb-5" style="width: 100%;">
                         <h1>Contacte con Nosotros</h1>
                         -----------------
-                        <h4>Dirección: Calle Consuelo 307-A, Cercado - Arequipa</h4>
+                        <h4>Dirección: {{ contactos.direccion }}</h4>
                         <br>
-                        <h4>Teléfono: (054) 399450</h4>
-                        <h4>servicio_clientes@electromaticindustrial.com</h4>
-                        <h4><a href="http://electromaticindustrial.com" target="_blank">electromaticindustrial.com</a></h4>
+                        <h4>Teléfono: {{ contactos.telefono }}</h4>
+                        <h4>{{ contactos.correo }} </h4>
+                        <h4><a href="{{ contactos.sitio_web }}" target="_blank">electromaticindustrial.com</a></h4>
                     </div>
                 </div>
             </div>
@@ -28,21 +28,54 @@
             <div class="col-sm-6 pb-5 pt-5 bg-warning" style="width: 100%;">
                 <h2 class="h4 border-bottom border-dark">FORMULARIO DE CONTACTO</h2>
                 <p>Por favor llene los campos adecuadamente y nos contactaremos con Ud. a la brevedad posible</p>
-                            <form action="/contacto" method="post">
-                    <input type="hidden" name="_token" value="8EE6FHTGW7d1k8MeWarGLGqIwmFNXQA1G9WawgiM">                <div class="form-group">
-                        <input type="text" name="nombre" class="form-control" placeholder="Nombres y apellidos:" required>                    
+                <form action="/contacto" method="post">
+                    <input type="hidden" name="_token" value="8EE6FHTGW7d1k8MeWarGLGqIwmFNXQA1G9WawgiM">                
+                    <div class="form-group">
+                        <input type="text" name="nombres" class="form-control" placeholder="Nombres:" required>                    
+                        <input type="text" name="apellidos" class="form-control" placeholder="Apellidos:" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="id" class="form-control" placeholder="DNI/RUC:">                    
+                        <input type="text" name="empresa" class="form-control" placeholder="Empresa:">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email:" required>
+                        <input type="text" name="RUC_empresa" class="form-control" placeholder="(*) RUC de empresa:" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="telefono" class="form-control" placeholder="Teléfono:" required>
+                        <input type="correo" name="email" class="form-control" placeholder="(*) Correo Electrónico:" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="mensaje" class="form-control" placeholder="Mensaje:" required></textarea>
+                        <input type="tel" name="telefono" class="form-control" placeholder="(*) Teléfono:" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="rubro" class="form-control">
+                            <option value="" disabled selected>(*) Rubro:</option>
+                            <option value="universidad">Universidad</option>
+                            <option value="hospitales">Hospitales</option>
+                            <option value="clinicas">Clínicas</option>
+                            <option value="banco">Banco</option>
+                            <option value="finacieras">Finacieras</option>
+                            <option value="mineria">Mineria</option>
+                            <option value="agroindustrias">Agroindustrias</option>
+                            <option value="entidad_estado">Entidad del estado</option>
+                            <option value="industriales">Empresas industriales</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="tipo_cliente" class="form-control" placeholder="(*) Lugar de instalación:" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="potencia" class="form-control" placeholder="Indíquenos la potencia del equipo (kVA):">
+                    </div>
+                    <div class="form-group"> 
+                        <select name="rubro" class="form-control">
+                            <option value="" disabled selected>(*) ¿Qué necesita?:</option>
+                            <option value="compra">Compra de un grupo electrógeno</option>
+                            <option value="alquiler">Alquiler de un grupo electrógeno</option>
+                            <option value="mantenimiento">Mantenimiento de un gripo electrógeno</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" class="form-control" placeholder="(*) Mensaje:" required=""></textarea>
                     </div>
                     <input type="submit" value="ENVIAR" name="btn" class="btn btn-danger mx-auto d-block">
                     <p class="small">(*) Datos obligatorios</p>
@@ -57,9 +90,11 @@
                         <div class="card-body">
                             <p>Empresas que confían en nosotros</p>   
                             <div class="row justify-content-center">
-                                <div class="col-sm-2 mb-2">
-                                    <img src="/img/clientes/perurail.jpg" alt="" class="img-fluid border">
+                                {% for item in contactos.clientes.all %}
+                                <div class="col-sm-2 mb-2 clientes">
+                                    <img src="/media/{{MEDIA_URL}}{{ item.empresa_imagen }}" alt="" class="img-fluid border">
                                 </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

@@ -17,6 +17,16 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
+  background: url('Cargador.png') 50% 50% no-repeat rgb(249,249,249);
+}
+/* Cargador animado en CSS
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
   background: #1EF73E;
   display: flex;
   justify-content: center;
@@ -34,6 +44,7 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+*/
 @keyframes girar {
   from {
     transform: rotate(0deg);
@@ -51,6 +62,13 @@ p {
   font-size: 13px;
   color: #7a7a7a;
   line-height: 24px;
+}
+
+li {
+  font-size: 13px;
+  color: #7a7a7a;
+  line-height: 24px;
+  text-align: left;
 }
 
 #page-content {
@@ -416,12 +434,12 @@ header {
 }
 
 #sidebar .toggle-btn span {
-  color: green;
+  color: rgba(12,12,12,0.9);
   display: block;
   width: 40px;
   text-align: center;
   font-size: 30px;
-  border: 3px solid green;
+  border: 3px solid rgba(12,12,12,0.9);
 }
 
 /* Slider Style */
@@ -857,6 +875,11 @@ header {
   margin-bottom: 12.5px;
 }
 
+#mantenimiento #preventivo, #mantenimiento #correctivo {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 /* Instalacion Style */
 
 #instalacion .contenido{
@@ -1160,11 +1183,173 @@ header {
   margin-bottom: 12.5px;
 }
 
+/* Suministros Style */
+
+#suministros .contenido{
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 80px;
+}
+
+#suministros .section-heading {
+  margin-right: 20%;
+}
+
+#suministros .content-section {
+  display: inline-block;
+  position: relative;
+}
+
+#suministros .owl-dots {
+  margin-top: 40px;
+}
+
+#suministros .owl-dots .owl-dot span  {
+  width: 12px;
+  height: 12px;
+  background-color: #cdcdcd!important;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+#suministros .owl-dots .active span {
+  background-color: #45489a!important;
+}
+
+#suministros .owl-dots button {
+  outline: none;
+}
+
+#suministros .owl-nav {
+  position: absolute;
+  display: inline-block;
+  top: -110px;
+  right: 0;
+}
+
+#suministros .owl-nav button:focus {
+  outline: none;
+}
+
+#suministros .owl-nav .owl-prev span {
+  margin-right: 10px;
+}
+
+#suministros .owl-nav .owl-next span, #suministros .owl-nav .owl-prev span {
+  outline: none;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  background-color: #eee;
+  color: #232323;
+  font-size: 42px;
+  transition: all 0.5s;
+}
+
+#suministros .owl-nav span:hover {
+  background-color: #45489a;
+  color: #fff;
+}
+
+#suministros .item {
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+#suministros .item .image {
+  position: relative;
+}
+
+#suministros .item .image img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#suministros .item .image div{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(54, 255, 47, 0.473);
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#suministros .item .image:hover{
+  cursor: pointer;
+}
+ 
+#suministros .item .image:hover div{
+  width: 100%;
+  height: 100%;
+  padding: 8px 15px;
+  text-align: justify;
+  visibility: visible;
+  opacity: 1.0; 
+}
+
+#suministros .item .image .featured-button a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: rgba(69,72,154, 0.9);
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 9;
+  bottom: -44px;
+  opacity: 0;
+}
+
+#suministros .item:hover .featured-button a {
+  bottom: 0;
+  opacity: 1;
+}
+
+#suministros .item .text-content {
+  padding-top: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+#suministros .item .text-content h4 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #232323;
+  letter-spacing: 0.5px;
+}
+
+#suministros .item .text-content span {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7a7a7a;
+  letter-spacing: 0.5px;
+  margin-bottom: 12.5px;
+}
+
 /* Contact Style */
 
 #contacto {
   padding-top: 0px;
-  background-color: #10b421;
+  background-color: green;
 }
 
 #contacto #contact-content .pilar-contacto {
@@ -1178,10 +1363,19 @@ header {
 }
 
 #contacto #contact-content .informacion-contacto {
-  padding: 0px 60px;
+  padding: 0px 60px 30px;
   width: 65%;
   float: left;
   background-color: white;
+}
+
+#contacto img {
+  width: 90px;
+  border: 1px solid #7a7a7a;
+}
+
+#contacto .clientes {
+  padding-bottom: 10px; 
 }
 
 #contacto input {
@@ -1258,9 +1452,6 @@ header {
   float: left;
   text-align: center;
   width: 77.5%;
-}
-
-#blog {
 }
 
 #blog .tabs {
@@ -1428,6 +1619,10 @@ header {
 
 }
 
+#contacto img {
+  width: 60px;
+}
+
 
 @media (max-width: 767px) {
 
@@ -1483,8 +1678,6 @@ header {
     z-index:5;
   }
 
-  
-
 }
 
 @media (max-width: 690px) {
@@ -1493,26 +1686,68 @@ header {
     position: relative;
   }
 
-  #featured {
+  #mantenimiento {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  #featured .owl-nav {
+  #mantenimiento .contenido{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #mantenimiento .owl-nav {
     position: absolute;
     display: inline-block;
-    top: -220px;
+    right: 0;
+  }
+  
+  #instalacion {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #instalacion .contenido{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #instalacion .owl-nav {
+    position: absolute;
+    display: inline-block;
     right: 0;
   }
 
-  #projects {
+  #repuestos {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  #video {
+  #repuestos .contenido{
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  #repuestos .owl-nav {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+  }
+
+  #suministros {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #suministros .contenido{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #suministros .owl-nav {
+    position: absolute;
+    display: inline-block;
+    right: 0;
   }
   
   #page-content .cabezera .logo {
@@ -1548,6 +1783,30 @@ header {
   #contact-content {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  #contacto #contact-content .pilar-contacto {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: top;
+    position: static;
+    width: 100%;
+  }
+
+  #contacto #contact-content .pilar-contacto h4{
+    font-size: 10px;
+  }
+
+  #contacto #contact-content .informacion-contacto {
+    padding-left: 15px;
+    padding-right: 15px;
+    float: top;
+    position: static;
+    width: 100%;
+  }
+
+  #contacto img {
+    width: 200px;
   }
 
 }

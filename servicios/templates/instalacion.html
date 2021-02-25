@@ -2,13 +2,13 @@
 {% load static %}
 {% block instalacion %}
 <div id="seccion-instalacion"><section id="instalacion" class="content-section">
-    <img src="{% static 'img/instalacion.jpeg' %}" width="100%" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
+    <img src="/media/{{MEDIA_URL}}{{ instalacion.portada_imagen }}" width="100%" alt="Mantenimiento correctivo y preventivo de Grupos Electrógenos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
             <h1>Instalación de <em>Generadores</em></h1>
         </div>
         <div>                        
-            <p style="text-align: justify;">Electromatic Industrial pone a su disposici&oacute;n un equipo de &nbsp;profesionales t&eacute;cnicos para realizar&nbsp;&nbsp;soluciones integrales, que aseguren la correcta instalaci&oacute;n, garantizando un correcto funcionamiento antes, durante y despu&eacute;s del primer arranque, proporcionando la confianza de disponer de equipos adecuadamente ajustados y regulados para su eficaz funcionamiento.</p>
+            <p style="text-align: justify;">{{ instalacion.contenido }}</p>
             <br>
         </div>
         <div class="section-content">
@@ -20,7 +20,7 @@
             </div>
             <br>
             <div class="owl-carousel owl-theme">
-                {% for imagen in instalacion_imagenes %}
+                {% for imagen in instalacion.imagenes.all %}
                 <div class="item">
                     <div class="image">
                         <img src="/media/{{MEDIA_URL}}{{ imagen.imagen }}" alt="">
