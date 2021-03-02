@@ -30,23 +30,22 @@
                 <p>Por favor llene los campos adecuadamente y nos contactaremos con Ud. a la brevedad posible</p>
                 <form action="/contacto" method="post">
                     <input type="hidden" name="_token" value="8EE6FHTGW7d1k8MeWarGLGqIwmFNXQA1G9WawgiM">                
-                    <div class="form-group">
-                        <input type="text" name="nombres" class="form-control" placeholder="Nombres:" required>                    
+                    <div class="input-group">
+                        <input type="text" name="nombres" class="form-control" placeholder="Nombres:" required>
+                        <span class="input-group-addon"></span>
                         <input type="text" name="apellidos" class="form-control" placeholder="Apellidos:" required>
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <input type="text" name="empresa" class="form-control" placeholder="Empresa:">
-                    </div>
-                    <div class="form-group">
+                        <span class="input-group-addon"></span>
                         <input type="text" name="RUC_empresa" class="form-control" placeholder="(*) RUC de empresa:" required>
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <input type="correo" name="email" class="form-control" placeholder="(*) Correo Electrónico:" required>
-                    </div>
-                    <div class="form-group">
+                        <span class="input-group-addon"></span>
                         <input type="tel" name="telefono" class="form-control" placeholder="(*) Teléfono:" required>
                     </div>
-                    <div class="form-group">
+                    <div class="input-group">
                         <select name="rubro" class="form-control">
                             <option value="" disabled selected>(*) Rubro:</option>
                             <option value="universidad">Universidad</option>
@@ -59,8 +58,7 @@
                             <option value="entidad_estado">Entidad del estado</option>
                             <option value="industriales">Empresas industriales</option>
                         </select>
-                    </div>
-                    <div class="form-group">
+                        <span class="input-group-addon"></span>
                         <input type="text" name="tipo_cliente" class="form-control" placeholder="(*) Lugar de instalación:" required>
                     </div>
                     <div class="form-group">
@@ -89,13 +87,32 @@
                     <div class="card">                
                         <div class="card-body">
                             <p>Empresas que confían en nosotros</p>   
-                            <div class="row justify-content-center">
-                                {% for item in contactos.clientes.all %}
-                                <div class="col-sm-2 mb-2 clientes">
-                                    <img src="/media/{{MEDIA_URL}}{{ item.empresa_imagen }}" alt="" class="img-fluid border">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                              
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="/media/{{MEDIA_URL}}{{ contactos.clientes.first.empresa_imagen }}" alt="Los Angeles">
+                                    </div>
+                                    {% for item in contactos.clientes.all %}
+                                    {% if item.pk >= 2 %}
+                                    <div class="item">
+                                        <img src="/media/{{MEDIA_URL}}{{ item.empresa_imagen }}" alt="" class="img-fluid border">
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
                                 </div>
-                                {% endfor %}
-                            </div>
+                              
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                  <span class="glyphicon glyphicon-chevron-left"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                  <span class="glyphicon glyphicon-chevron-right"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
                         </div>
                     </div>
                 </div>

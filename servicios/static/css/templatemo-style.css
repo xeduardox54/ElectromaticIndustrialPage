@@ -434,12 +434,12 @@ header {
 }
 
 #sidebar .toggle-btn span {
-  color: rgba(12,12,12,0.9);
+  color: rgb(37, 192, 37);
   display: block;
   width: 40px;
   text-align: center;
   font-size: 30px;
-  border: 3px solid rgba(12,12,12,0.9);
+  border: 3px solid rgb(37, 192, 37);
 }
 
 /* Slider Style */
@@ -624,7 +624,7 @@ header {
 }
 
 #servicios .owl-dots .active span {
-  background-color: #45489a!important;
+  background-color: #35D444!important;
 }
 
 #servicios .owl-dots button {
@@ -660,7 +660,7 @@ header {
 }
 
 #servicios .owl-nav span:hover {
-  background-color: #45489a;
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -690,7 +690,7 @@ header {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(69,72,154, 0.9);
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -770,7 +770,7 @@ header {
 }
 
 #mantenimiento .owl-dots .active span {
-  background-color: #45489a!important;
+  background-color: #35D444!important;
 }
 
 #mantenimiento .owl-dots button {
@@ -806,7 +806,7 @@ header {
 }
 
 #mantenimiento .owl-nav span:hover {
-  background-color: #45489a;
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -831,7 +831,7 @@ header {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(69,72,154, 0.9);
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -911,7 +911,7 @@ header {
 }
 
 #instalacion .owl-dots .active span {
-  background-color: #45489a!important;
+  background-color: #35D444!important;
 }
 
 #instalacion .owl-dots button {
@@ -947,7 +947,7 @@ header {
 }
 
 #instalacion .owl-nav span:hover {
-  background-color: #45489a;
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -977,7 +977,7 @@ header {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(69,72,154, 0.9);
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -1052,7 +1052,7 @@ header {
 }
 
 #repuestos .owl-dots .active span {
-  background-color: #45489a!important;
+  background-color: #35D444!important;
 }
 
 #repuestos .owl-dots button {
@@ -1088,7 +1088,7 @@ header {
 }
 
 #repuestos .owl-nav span:hover {
-  background-color: #45489a;
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -1139,7 +1139,7 @@ header {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(69,72,154, 0.9);
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -1214,7 +1214,7 @@ header {
 }
 
 #suministros .owl-dots .active span {
-  background-color: #45489a!important;
+  background-color: #35D444!important;
 }
 
 #suministros .owl-dots button {
@@ -1249,8 +1249,8 @@ header {
   transition: all 0.5s;
 }
 
-#suministros .owl-nav span:hover {
-  background-color: #45489a;
+#suminisztros .owl-nav span:hover {
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -1301,7 +1301,7 @@ header {
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background-color: rgba(69,72,154, 0.9);
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -1370,7 +1370,7 @@ header {
 }
 
 #contacto img {
-  width: 90px;
+  width: 120px;
   border: 1px solid #7a7a7a;
 }
 
@@ -1378,7 +1378,7 @@ header {
   padding-bottom: 10px; 
 }
 
-#contacto input {
+#contacto input, #contacto select{
   border-radius: 0px;
   padding-left: 15px;
   font-size: 13px;
@@ -1391,6 +1391,20 @@ header {
   height: 40px;
   width: 100%;
   margin-bottom: 25px;
+}
+
+#contacto #map {
+  margin-bottom: 10px;
+}
+
+#contacto .input-group-addon {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  border-radius: 4px;
+  background-color: transparent;
+  border: transparent;
 }
 
 #contacto textarea {
@@ -1416,7 +1430,7 @@ header {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
-  background-color: #45489a;
+  background-color: #35D444;
   display: inline-block;
   height: 44px;
   line-height: 24px;
@@ -1461,7 +1475,7 @@ header {
   height: 90px;
   width: 100%;
   background-color: #eee;
-  border-bottom: 10px solid #45489a;
+  border-bottom: 10px solid #35D444;
 }
 
 #blog .tabs li {
@@ -1487,7 +1501,7 @@ header {
 }
 
 #blog .tabs a:hover {
-  color: #45489a;
+  color: #35D444;
 }
 
 
@@ -1496,7 +1510,7 @@ header {
 }
 
 #blog .tabs .active {
-  background-color: #45489a;
+  background-color: #35D444;
   color: #fff;
 }
 
@@ -1619,8 +1633,10 @@ header {
 
 }
 
-#contacto img {
-  width: 60px;
+#contacto #myCarousel img {
+  width: 180px;
+  display:block;
+  margin:auto;
 }
 
 
@@ -1780,6 +1796,10 @@ header {
     display: block;
   }
 
+  #contacto {
+    margin-left: 0px;
+  }
+
   #contact-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -1807,6 +1827,10 @@ header {
 
   #contacto img {
     width: 200px;
+  }
+
+  #contacto #map {
+    margin-left: 0px;
   }
 
 }
