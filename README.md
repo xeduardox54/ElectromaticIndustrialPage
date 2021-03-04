@@ -27,6 +27,7 @@ Este proyecto consta del desarrollo de una página web con capacidades de admini
 ***
 Estos son los pasos para instalar este proyecto con Django:
 ```
+Crear un entorno virtual y activarlo. Puede ver como se hace con el siguiente link: https://docs.python.org/es/3/tutorial/venv.html
 $ git clone https://github.com/xeduardox54/ElectromaticIndustrialPage.git (Clonamos el repositorio)
 $ cd ElectromaticIndustrialPage (Ingresamos a la carpeta contenedora)
 $ pip install -r requirements.txt (Instalamos las librerias del proyecto)
@@ -42,10 +43,10 @@ Información adicional: Usted puede utilizar la base de datos SQLite 3 que Djang
 1. **¿Por qué no me salen imágenes o contenido cuando inicio el proyecto en el navegador?**
 Primero debe de insertar las imágenes y el contenido desde el panel de administrador del sitio web, donde la primera vez tendrá que crear un objeto y llenarlo con la información e imágenes que se requieran; la segunda vez solo tendrá que editar las características de dicho objeto. Si crea más de un objeto, se tomará en cuenta el último que haya agregado siempre.
 2. **¿Como ingreso al administrador del sitio web?**
-Para ingresar, debe colocar "/admin" al final de la IP o dominio en la URL del sitio web desde el que esté accediendo al proyecto. Ejemplo: https://<<IP o Dominio>>/admin
+Para ingresar, debe colocar "/admin" al final de la IP o dominio en la URL del sitio web desde el que esté accediendo al proyecto. Ejemplo: https://"IP o Dominio"/admin
 
 <a name="informacion-contacto"></a>
 ## Información de contacto
-Nombre: Eduardo Rodríguez
-Correo: xeduardox54@hotmail.com
-Número: 983848610
+* Nombre: Eduardo Rodríguez
+* Correo: xeduardox54@hotmail.com
+* Número: 983848610
