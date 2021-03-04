@@ -5,16 +5,14 @@
     <img src="/media/{{MEDIA_URL}}{{ repuestos.portada_imagen }}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
-            <br><br>
-            <h1>Venta de <em>Repuestos</em></h1>
         </div>
         <div>
             <p style="text-align: justify;">{{ repuestos.contenido }}</p>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center">Articulos que puedes revisar</h2>
-                <br><br><br><br><br><br>
+                <h2 class="text-center">Tienda</h2>
+                <br><br>
             </div>
         </div>
         <br>
@@ -27,6 +25,15 @@
                 </div>
             </div>
             {% endfor %}
+            {% if repuestos.articulos.count <= 3 %}
+            <!-- Quitando botones de navegación en caso de tener menos de 3 imagenes -->
+            <script>
+                function borrarPrevNextRepuestos(){
+                    document.getElementById('repuestos').getElementsByClassName('owl-prev')[0].style.display = "none";
+                    document.getElementById('repuestos').getElementsByClassName('owl-next')[0].style.display = "none";
+                }
+            </script>
+            {% endif %}
         </div>
     </div>
 </section>

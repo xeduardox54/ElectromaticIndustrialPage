@@ -5,7 +5,6 @@ Sentra Template
 https://templatemo.com/tm-518-sentra
 
 */
-
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -19,6 +18,34 @@ body {
   z-index: 9999;
   background: url('Cargador.png') 50% 50% no-repeat rgb(249,249,249);
 }
+
+a.button1{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  transition: all 0.2s;
+  height: 77px;
+  line-height: 60px;
+  font-weight: 600;
+}
+a.button1:hover{
+  color: white;
+  background-color: black;
+}
+@media all and (max-width:30em){
+  a.button1 {
+    display:block;
+    margin: 0.4em auto;
+  }
+}
+
 /* Cargador animado en CSS
 .loader {
   position: fixed;
@@ -44,7 +71,6 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-*/
 @keyframes girar {
   from {
     transform: rotate(0deg);
@@ -53,6 +79,7 @@ body {
     transform: rotate(360deg);
   }
 }
+*/
 
 video {
   width: 100%;
@@ -69,6 +96,12 @@ li {
   color: #7a7a7a;
   line-height: 24px;
   text-align: left;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  color: #35D444;
 }
 
 #page-content {
@@ -267,33 +300,33 @@ header {
   border: 1px solid green;
 }
 
-#page-content .logo {
+#barra-contenedor {
+  width: 100%;
+  position: relative;
+}
+
+#barra-logo {    
+  display:block;
+  margin:auto;
+  position: relative;
+  width: 18%;
+}
+
+#ModalContacto {
+  top: 0px;
+  right: 10px;
   position: absolute;
-  width: 22.5%;
-  height: 25%;
-  line-height: 100px;
-  background-color:#ffffff00;
-  padding: 20px;
-  text-align: center;
-  transition: all 500ms linear;
-  top: 0%;
 }
 
-#page-content .logo.active {
-  top: -25%;
-}
-
-#page-content .logo a img{
+#barra-logo a img{
   text-decoration: none;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  height: 100%;
-  width: 100%;
+  width: 160px;
   display: inline-block;
-  border: 1px solid green;
 }
 
 .sidebar-navigation .logo em {
@@ -422,7 +455,7 @@ header {
 #sidebar .toggle-btn {
   position: absolute;
   left: 105%;
-  top: 28%;
+  top: 15px;
   cursor: pointer;
 }
 
@@ -1349,13 +1382,12 @@ header {
 
 #contacto {
   padding-top: 0px;
-  background-color: green;
 }
 
 #contacto #contact-content .pilar-contacto {
-  padding: 60px 10px;
+  padding: 0px 10px;
   width: 35%;
-  height: 100%;
+  height: 747px;
   float: left;
   position: relative;
   color: white;
@@ -1363,7 +1395,7 @@ header {
 }
 
 #contacto #contact-content .informacion-contacto {
-  padding: 0px 60px 30px;
+  padding: 0px 20px 30px;
   width: 65%;
   float: left;
   background-color: white;
@@ -1391,10 +1423,6 @@ header {
   height: 40px;
   width: 100%;
   margin-bottom: 25px;
-}
-
-#contacto #map {
-  margin-bottom: 10px;
 }
 
 #contacto .input-group-addon {
@@ -1445,6 +1473,145 @@ header {
 #contacto button:hover {
   color: #232323;
   background-color: #f4f4f4;
+}
+
+#contacto-clientes .contenido{
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 80px;
+}
+
+#contacto-clientes .section-heading {
+  margin-right: 20%;
+}
+
+#contacto-clientes .content-section {
+  display: inline-block;
+  position: relative;
+}
+
+#contacto-clientes .owl-dots {
+  margin-top: 40px;
+}
+
+#contacto-clientes .owl-dots .owl-dot span  {
+  width: 12px;
+  height: 12px;
+  background-color: #cdcdcd!important;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+#contacto-clientes .owl-dots .active span {
+  background-color: #35D444!important;
+}
+
+#contacto-clientes .owl-dots button {
+  outline: none;
+}
+
+#contacto-clientes .owl-nav {
+  position: absolute;
+  display: inline-block;
+  top: -110px;
+  right: 0;
+}
+
+#contacto-clientes .owl-nav button:focus {
+  outline: none;
+}
+
+#contacto-clientes .owl-nav .owl-prev span {
+  margin-right: 10px;
+}
+
+#contacto-clientes .owl-nav .owl-next span, #contacto-clientes .owl-nav .owl-prev span {
+  outline: none;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  background-color: #eee;
+  color: #232323;
+  font-size: 42px;
+  transition: all 0.5s;
+}
+
+#contacto-clientes .owl-nav span:hover {
+  background-color: #35D444;
+  color: #fff;
+}
+
+#contacto-clientes .item {
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+#contacto-clientes .item .image {
+  position: relative;
+}
+
+#contacto-clientes .item .image img {
+  width: 100%;
+  overflow: hidden;
+}
+
+#contacto-clientes .item .image img.active {
+  width: 77.5%;
+  overflow: hidden;
+}
+
+#contacto-clientes .item .image .featured-button a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #35D444;
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 9;
+  bottom: -44px;
+  opacity: 0;
+}
+
+#contacto-clientes .item:hover .featured-button a {
+  bottom: 0;
+  opacity: 1;
+}
+
+#contacto-clientes .item .text-content {
+  padding-top: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+#contacto-clientes .item .text-content h4 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #232323;
+  letter-spacing: 0.5px;
+}
+
+#contacto-clientes .item .text-content span {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7a7a7a;
+  letter-spacing: 0.5px;
+  margin-bottom: 12.5px;
 }
 
 /* Blog Style */
@@ -1582,21 +1749,32 @@ header {
 /* Footer Style */
 
 .footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgba(12,12,12,0.9);
-  height: 80px;
-  line-height: 80px;
+  height: 150px;
   display: inline-block;
   text-align: center;
   width: 100%;
 }
 
-.footer p {
+.footer h4 {
+  margin-bottom: 0px;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.footer .pilar-contacto{
+  float: left;
   margin-bottom: 0px;
   font-size: 13px;
-  line-height: 80px;
   color: #fff;
   letter-spacing: 0.5px;
   font-weight: 300;
+  width: 100%;
 }
 
 .footer p a {
@@ -1692,6 +1870,10 @@ header {
     font:32px/50px FontAwesome;
     color:#FFF;
     z-index:5;
+  }
+
+  #barra-contenedor {
+    display: none;
   }
 
 }
@@ -1811,6 +1993,7 @@ header {
     float: top;
     position: static;
     width: 100%;
+    height: 400px;
   }
 
   #contacto #contact-content .pilar-contacto h4{
@@ -1829,8 +2012,12 @@ header {
     width: 200px;
   }
 
-  #contacto #map {
+  #contacto #barra-logo {
     margin-left: 0px;
+  }
+
+  .footer h4 {
+    font-size: 10px;
   }
 
 }

@@ -1,11 +1,14 @@
 {% extends "top.html" %}
-{% load static %}
 {% block servicios %}
 <section id="servicios" class="content-section">
     <div class="section-content">
-        <h2>Entre los servicios que ofrecemos encontrarás:</h2>
-        <br><br><br><br><br><br>
-        <div class="owl-carousel owl-theme">
+        <h2>¿Quiénes somos?</h2>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac eleifend orci, a porta lectus. Donec suscipit ex ante, nec vehicula mauris congue nec. Integer nec tortor ante. Proin et mollis erat, in vestibulum enim. Proin eu quam eget felis vulputate dignissim. Fusce ac tempus dolor, sed condimentum lorem. Vivamus sem est, accumsan et cursus eget, sagittis ut massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut blandit quis lorem sed finibus. Nunc venenatis cursus turpis, ac tincidunt urna feugiat hendrerit.</p>
+        <br><br>
+        <h2>Nuestros Servicios</h2>
+        <br><br>
+        <div class="owl-carousel owl-carousel-servicios owl-theme">
             <div class="item">
                 <div class="image">
                     <img src="/media/{{ MEDIA_URL }}{{ mantenimiento.servicio_imagen }}" alt="">
@@ -14,7 +17,7 @@
                     </div>
                 </div>
                 <div class="text-content">
-                    <h4>Mantenimiento Preventivo y Correctivo</h4>
+                    <h4 style="text-align: center;">Mantenimiento Preventivo y Correctivo</h4>
                 </div>
             </div>
             <div class="item">
@@ -25,7 +28,7 @@
                     </div>
                 </div>
                 <div class="text-content">
-                    <h4>Instalación de Generadores</h4>
+                    <h4 style="text-align: center;">Instalación de Generadores</h4>
                 </div>
             </div>
             <div class="item">
@@ -36,7 +39,7 @@
                     </div>
                 </div>
                 <div class="text-content">
-                    <h4>Venta y alquiler de Repuestos</h4>
+                    <h4 style="text-align: center;">Venta y alquiler de Repuestos</h4>
                 </div>
             </div>
             <div class="item">
@@ -47,16 +50,13 @@
                     </div>
                 </div>
                 <div class="text-content">
-                    <h4>Venta y alquiler de Suministros</h4>
+                    <h4 style="text-align: center;">Venta y alquiler de Suministros</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <div id="page-content">
-    <div class="logo hidde-sm hidden-xs">
-        <a href=""><img src="{% static 'img/logo.png' %}"></a>
-    </div>
     {% block mantenimiento %}{% endblock %}
 </div>
 {% endblock %}

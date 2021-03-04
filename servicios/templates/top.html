@@ -1,6 +1,15 @@
 {% extends "sidebar.html" %}
+{% load static %}
 {% block top %}
 <section id="top" class="content-section">
+    <div id="barra-contenedor">
+        <div id="barra-logo">
+            <a href=""><img src="{% static 'img/logo.png' %}"></a>
+        </div>
+        <div id="ModalContacto">
+            <a href="#contacto" class="button1">CONTACTAR</a>
+        </div>
+    </div>
     <video autoplay muted loop>
         <source src='/media/{{ MEDIA_URL }}{{ video_presentacion }}' type='video/mp4' frameborder="0" allowfullscreen="allowfullscreen">
         Your browser does not support the video tag.

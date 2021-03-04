@@ -91,7 +91,6 @@ https://templatemo.com/tm-518-sentra
             console.log('clik')
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById("page-content").classList.toggle('active');
-            document.getElementById("page-content").getElementsByClassName("logo")[0].classList.toggle('active');
             document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.toggle('active');
             window.dispatchEvent(new Event('resize'));
             
@@ -114,7 +113,6 @@ https://templatemo.com/tm-518-sentra
                 if (contSidebar == 1) {
                     document.getElementById('sidebar').classList.add('active');
                     document.getElementById("page-content").classList.add('active');
-                    document.getElementById("page-content").getElementsByClassName("logo")[0].classList.add('active');
                     document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.add('active');
                     window.dispatchEvent(new Event('resize'));
                 }
@@ -125,7 +123,6 @@ https://templatemo.com/tm-518-sentra
                 if (contSidebar == 0) {
                     document.getElementById('sidebar').classList.remove('active');
                     document.getElementById("page-content").classList.remove('active');
-                    document.getElementById("page-content").getElementsByClassName("logo")[0].classList.remove('active');
                     document.getElementById("sidebar").getElementsByClassName("toggle-btn")[0].classList.remove('active');
                     window.dispatchEvent(new Event('resize'));
                 }
@@ -170,6 +167,24 @@ https://templatemo.com/tm-518-sentra
         //Pantalla de carga
         $(window).load(function() {
             $(".loader").fadeOut("slow");
+            document.getElementsByClassName('owl-prev')[0].style.display = "none";
+            document.getElementsByClassName('owl-next')[0].style.display = "none";
+            try {
+                borrarPrevNextMantenimiento();
+            } catch (error) {
+            }
+            try {
+                borrarPrevNextInstalacion();
+            } catch (error) {
+            }
+            try {
+                borrarPrevNextRepuestos();
+            } catch (error) {
+            }
+            try {
+                borrarPrevNextSuministros();
+            } catch (error) {
+            }
         });
     </script>
 

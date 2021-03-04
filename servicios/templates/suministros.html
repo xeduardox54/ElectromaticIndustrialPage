@@ -5,16 +5,14 @@
     <img src="/media/{{ MEDIA_URL }}{{ suministro.portada_imagen }}" width="100%" alt="Venta de repuestos" class="img-fluid mx-auto d-block">
     <div class="contenido">
         <div class="section-heading">
-            <br><br>
-            <h1><em>Suministros</em></h1>
         </div>
         <div>
             <p style="text-align: justify;">{{ suministro.contenido }}</p>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center">Articulos que puedes revisar</h2>
-                <br><br><br><br><br><br>
+                <h2 class="text-center">Tienda</h2>
+                <br><br>
             </div>
         </div>
         <br>
@@ -28,6 +26,15 @@
             </div>
             {% endfor %}
         </div>
+        {% if suministro.articulos.count <= 3 %}
+        <!-- Quitando botones de navegación en caso de tener menos de 3 imagenes -->
+        <script>
+            function borrarPrevNextSuministros(){
+                document.getElementById('suministros').getElementsByClassName('owl-prev')[0].style.display = "none";
+                document.getElementById('suministros').getElementsByClassName('owl-next')[0].style.display = "none";
+            }
+        </script>
+        {% endif %}
     </div>
 </section>
 {% block contactos %}{% endblock %}

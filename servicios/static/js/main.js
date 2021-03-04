@@ -47,6 +47,48 @@ jQuery(document).ready(function($) {
           $(this).addClass('open');
         });
 
+        $('.owl-carousel-servicios').owlCarousel({
+            loop:true,
+            margin:30,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:4,
+                    nav:false
+                },
+                1000:{
+                    items:4,
+                    nav:true,
+                    loop:false
+                }
+            }
+        })
+
+        $('.owl-carousel-clientes').owlCarousel({
+            autoplay:true,
+            loop:true,
+            margin:30,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                }
+            }
+        })
+
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:30,
@@ -67,7 +109,6 @@ jQuery(document).ready(function($) {
                 }
             }
         })
-
 
 
         var contentSection = $('.content-section, .main-banner');
