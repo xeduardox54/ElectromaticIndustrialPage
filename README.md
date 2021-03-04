@@ -27,14 +27,14 @@ Este proyecto consta del desarrollo de una página web con capacidades de admini
 ***
 Estos son los pasos para instalar este proyecto con Django:
 ```
-Crear un entorno virtual y activarlo. Puede ver como se hace con el siguiente link: https://docs.python.org/es/3/tutorial/venv.html
-$ git clone https://github.com/xeduardox54/ElectromaticIndustrialPage.git (Clonamos el repositorio)
-$ cd ElectromaticIndustrialPage (Ingresamos a la carpeta contenedora)
-$ pip install -r requirements.txt (Instalamos las librerias del proyecto)
-$ python manage.py makemigrations servicios (Hacemos las migraciones)
-$ python managepy migrate (Migramos la base de datos)
+Primero se debe crear un entorno virtual y activarlo. Puede ver como se hace con el siguiente link: https://docs.python.org/es/3/tutorial/venv.html
+$ git clone https://github.com/xeduardox54/ElectromaticIndustrialPage.git
+$ cd ElectromaticIndustrialPage
+$ pip install -r requirements.txt
+$ python manage.py makemigrations servicios
+$ python manage.py migrate
 $ python manage.py createsuperuser (Creamos el usuario administrador para el sitio web)
-$ python manage.py runserver (Corremos el servidor como prueba de que funciona)
+$ python manage.py runserver
 ```
 Información adicional: Usted puede utilizar la base de datos SQLite 3 que Django crea por defecto o utilizar una base de datos PostgreSQL. En caso de utilizar la segunda, luego de clonar el proyecto ingrese a la carpeta "ElectromaticIndustrialPage" 2 veces, abra el archivo "settings.py" y cambié allí el uso de la base de datos por defecto a la configuración que está allí para PostgreSQL; la cuenta y contraseña de esta base de datos ya están por colocadas, por lo que debe cambiarlas a las credenciales de la base de datos PostgreSQL vaya a utilizar para el proyecto.
 <a name="preguntas"></a>
