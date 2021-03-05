@@ -25,16 +25,16 @@
                 </div>
             </div>
             {% endfor %}
-            {% if repuestos.articulos.count <= 3 %}
-            <!-- Quitando botones de navegación en caso de tener menos de 3 imagenes -->
-            <script>
-                function borrarPrevNextRepuestos(){
-                    document.getElementById('repuestos').getElementsByClassName('owl-prev')[0].style.display = "none";
-                    document.getElementById('repuestos').getElementsByClassName('owl-next')[0].style.display = "none";
-                }
-            </script>
-            {% endif %}
         </div>
+        {% if 3 >= repuestos.articulos.count %}
+        <!-- Quitando botones de navegación en caso de tener menos de 3 imagenes -->
+        <script>
+            function borrarPrevNextRepuestos(){
+                document.getElementById('repuestos').getElementsByClassName('owl-prev')[0].style.display = "none";
+                document.getElementById('repuestos').getElementsByClassName('owl-next')[0].style.display = "none";
+            }
+        </script>
+        {% endif %}
     </div>
 </section>
 {% block suministros %}{% endblock %}
