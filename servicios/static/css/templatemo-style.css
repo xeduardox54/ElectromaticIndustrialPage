@@ -46,40 +46,11 @@ a.button1:hover{
   }
 }
 
-/* Cargador animado en CSS
-.loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: #1EF73E;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#servicios .somos {
+  text-align: justify;
+  padding-left: 30%;
+  padding-right: 30%;
 }
-.preloader{
-  position: fixed;
-  width: 70px;
-  height: 70px;
-  border: 10px solid #eee;
-  border-top: 10px solid #666;
-  border-radius: 50%;
-  animation-name: girar;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
 
 video {
   width: 100%;
@@ -99,9 +70,10 @@ li {
 }
 
 h2 {
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  color: #35D444;
+  color: #2caf39;
 }
 
 #page-content {
@@ -1622,11 +1594,26 @@ header {
   width: 100%;
 }
 
+.cabezera img {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid green;
+}
+
 #page-content .cabezera .logo {
   float: left;
   position: relative;
   z-index: +1;
   width: 22.5%;
+  padding: 20px;
+  text-align: center;
 }
 
 .cabezera .section-heading {
@@ -1820,6 +1807,11 @@ header {
 
 @media (max-width: 767px) {
 
+  #servicios .somos {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
   .responsive-nav {
     display: block;
     height: 60px;
@@ -1879,6 +1871,15 @@ header {
 }
 
 @media (max-width: 690px) {
+
+  #servicios .somos {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 
   .section-heading p {
     position: relative;
